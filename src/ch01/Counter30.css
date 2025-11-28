@@ -1,0 +1,550 @@
+/* ===========================
+   전체 레이아웃 & 기본 스타일
+   =========================== */
+.app-30 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f3f4f6;
+  padding: 40px 16px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+}
+
+.card-30 {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 20px 28px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  box-sizing: border-box;
+}
+
+.title-30 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* ===========================
+   섹션
+   =========================== */
+.section-30 {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.section-title {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+/* ===========================
+   기본 field-row (일부에서 사용)
+   =========================== */
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.field-row label {
+  width: 80px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.field-row input {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.field-row input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+.unit {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* ===========================
+   1. 월급 / 불로소득 / 용돈 한 줄
+   =========================== */
+.income-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.income-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.income-item label {
+  font-size: 12px;
+  color: #374151;
+}
+
+.income-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.income-input-wrap input {
+  flex: 1;
+  width: 60px;
+  min-width: 0;
+  padding: 6px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  box-sizing: border-box;
+}
+
+.income-input-wrap input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+/* ===========================
+   고정지출 상세
+   =========================== */
+.fixed-group {
+  width: 460px;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.fixed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fixed-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.fixed-total {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+/* 고정지출 2개씩 반반 */
+.fixed-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.fixed-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fixed-item label {
+  width: 38px;
+  font-size: 12px;
+  color: #374151;
+}
+
+.fixed-item input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  box-sizing: border-box;
+}
+
+.fixed-item input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+.fixed-item .unit {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* 모바일에서 줄바꿈 */
+@media (max-width: 600px) {
+  .income-row {
+    flex-direction: column;
+  }
+
+  .fixed-row {
+    flex-direction: column;
+  }
+}
+
+/* ===========================
+   요약 영역
+   =========================== */
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.summary-item {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.summary-item.summary-main {
+  grid-column: 1 / 3;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.summary-label {
+  display: block;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.summary-value {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.summary-value.main {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+/* ===========================
+   3. 복리 계산 영역
+   =========================== */
+.rate-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.rate-input-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rate-input-wrap label {
+  font-size: 12px;
+  color: #374151;
+}
+
+.rate-inner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rate-inner input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  box-sizing: border-box;
+}
+
+.rate-inner input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+/* ===========================
+   4. 은퇴 자금 영역 (한 줄 + 버튼)
+   =========================== */
+.retire-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.retire-item {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.retire-item label {
+  font-size: 12px;
+  color: #374151;
+}
+
+.retire-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.retire-input-wrap input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  box-sizing: border-box;
+}
+
+.retire-input-wrap input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+.retire-button-wrap {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* ===========================
+   버튼
+   =========================== */
+.btn-calc {
+  margin-top: 6px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2563eb;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-calc:hover {
+  background: #1d4ed8;
+}
+
+/* inline 버전은 margin-top 제거 */
+.btn-calc-inline {
+  margin-top: 0;
+}
+
+/* ===========================
+   결과 박스
+   =========================== */
+.result-box {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.result-row:last-child {
+  margin-bottom: 0;
+}
+
+.result-label {
+  color: #6b7280;
+}
+
+.result-value {
+  color: #111827;
+}
+
+.result-value.highlight {
+  font-weight: 600;
+  color: #16a34a;
+}
+
+.result-row.result-total {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed #d1d5db;
+}
+
+.result-value.strong {
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+/* ===========================
+   A4 인쇄 최적화 (진짜 한 장용 타이트 버전)
+   =========================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 6.3mm; /* 살짝 줄인 바깥 여백 */
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .app-30 {
+    min-height: auto;
+    background: #ffffff;
+    padding: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .card-30 {
+    max-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 6.5mm;      /* 내부 여백도 살짝 줄임 */
+    font-size: 12px;
+  }
+
+  .title-30 {
+    font-size: 17px;
+    margin-bottom: 8px;   /* 10 → 8 */
+  }
+
+  .section-30 {
+    margin-top: 8px;      /* 16 → 8 */
+    padding-top: 4px;     /* 12 → 4 */
+  }
+
+  .section-title {
+    font-size: 13px;
+    margin-bottom: 4px;   /* 10 → 4 */
+  }
+
+  /* 입력 영역 타이트하게 */
+  .income-row {
+    gap: 6px;             /* 10 → 6 */
+    margin-bottom: 6px;
+  }
+
+  .income-input-wrap input,
+  .fixed-item input,
+  .rate-inner input,
+  .retire-input-wrap input {
+    padding: 4px 6px;     /* 6,8 → 4,6 */
+    font-size: 12px;
+  }
+
+  .fixed-group {
+    width: 100%;
+    margin-top: 6px;
+    padding: 7px;
+    border-radius: 6px;
+  }
+
+  .fixed-row {
+    gap: 6px;
+    margin-bottom: 5px;
+  }
+
+  .fixed-header {
+    margin-bottom: 4px;
+  }
+
+  .fixed-title,
+  .fixed-total {
+    font-size: 12px;
+  }
+
+  .unit {
+    font-size: 11px;
+  }
+
+  /* 요약 영역 */
+  .summary-grid {
+    gap: 6px;
+    margin-top: 2px;
+  }
+
+  .summary-item {
+    padding: 6px 8px;
+  }
+
+  .summary-label {
+    font-size: 10px;
+  }
+
+  .summary-value {
+    font-size: 12px;
+  }
+
+  .summary-value.main {
+    font-size: 13px;
+  }
+
+  /* 복리 & 은퇴 행 간격 */
+  .rate-row,
+  .retire-row {
+    gap: 6px;
+  }
+
+  /* 버튼 */
+  .btn-calc {
+    padding: 5px 10px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
+
+  /* 결과 박스 */
+  .result-box {
+    padding: 6px 8px;
+    margin-top: 6px;
+    border-radius: 6px;
+  }
+
+  .result-row {
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+
+  .result-row.result-total {
+    margin-top: 4px;
+    padding-top: 4px;
+  }
+}

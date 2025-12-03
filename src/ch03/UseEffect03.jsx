@@ -14,6 +14,7 @@ function UseEffect03() {
       setResult(num1 + num2);
   }, [num1, num2]);
 
+
 const handleNum1OnClick = () => {
   setNum1(num1 + 1);
 }

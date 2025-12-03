@@ -1,3 +1,4 @@
+
 import { createRoot } from "react-dom/client";
 import App01 from "./ch01/App01";
 import App02 from "./ch02/App02";
@@ -13,10 +14,15 @@ import SearchName from "./ch02/SearchName";
 import UseEffect01 from "./ch03/UseEffect01";
 import UseEffect02 from "./ch03/UseEffect02";
 import UseEffect03 from "./ch03/UseEffect03";
+import UseEffect04 from "./ch03/UseEffect04";
+import Axios01 from "./ch04/Axios01";
+import Promise01 from "./ch04/Promise01";
+import Axios02 from "./ch04/Axios02";
+import Axios02_2 from "./ch04/Axios02_2";
+import Axios03 from "./ch04/Axios03";
+import Axios04 from "./ch04/Axios04";
 
-
-
-
+/////////////////////////////////////////
 
 const appObj = {
     ch01: <App01 />,
@@ -29,12 +35,20 @@ const appObj = {
     ch03: <UseEffect01/>,
     ch03_2: <UseEffect02/>,
     ch03_3: <UseEffect03/>,
+    ch03_4: <UseEffect04/>,
+    ch04:<Axios01/>,
+    ch04_1:<Promise01/>,
+    ch04_2:<Axios02/>,
+    ch04_2_2:<Axios02_2/>,
+    ch04_2_3:<Axios03/>,
+    ch04_2_4:<Axios04/>,
     serchname: <SearchName/>,
     inputs: <Inputs/>,
     counter: <Counter />,
     counter_30year:<Counter_30year/>,
+
 }
-const currentApp = "ch03_3";
+const currentApp = "ch04_2_4";
 const root = document.getElementById("root");
 createRoot(root).render(appObj[currentApp]);
 

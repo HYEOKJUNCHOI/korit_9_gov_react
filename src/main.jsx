@@ -21,6 +21,20 @@ import Axios02 from "./ch04/Axios02";
 import Axios02_2 from "./ch04/Axios02_2";
 import Axios03 from "./ch04/Axios03";
 import Axios04 from "./ch04/Axios04";
+import Axios05 from "./ch04/Axios05";
+import Auth01 from "./ch05/Auth01";
+import Auth02 from "./ch05/Auth02";
+import Router01 from "./ch06/Router01";
+import Router02 from "./ch06/Router02";
+import Router03 from "./ch06/Router03";
+import Router04 from "./ch06/Router04";
+import Router05 from "./ch06/Router05";
+import Css from "./ch07/Css";
+import Css02 from "./ch07/Css02";
+import Zustand01 from "./ch08/Zustand01";
+import Zustand02 from "./ch08/Zustand02";
+import Zustand03 from "./ch08/Zustand03";
+import ReactQuery01 from "./ch09/ReactQuery01";
 
 /////////////////////////////////////////
 
@@ -42,13 +56,28 @@ const appObj = {
     ch04_2_2:<Axios02_2/>,
     ch04_2_3:<Axios03/>,
     ch04_2_4:<Axios04/>,
+    ch04_2_5:<Axios05/>,
+    ch05_1:<Auth01/>,
+    ch05_2:<Auth02/>,
+    ch06_1:<Router01/>,
+    ch06_2:<Router02/>,
+    ch06_3:<Router03/>,
+    ch06_4:<Router04/>,
+    ch06_5:<Router05/>,
+    ch07_1: <Css/>,
+    ch07_2:<Css02/>,
+    ch08_1:<Zustand01/>,
+    ch08_2:<Zustand02/>,
+    ch08_3:<Zustand03/>,
+    ch09_1:<ReactQuery01/>,
+    
     serchname: <SearchName/>,
     inputs: <Inputs/>,
     counter: <Counter />,
     counter_30year:<Counter_30year/>,
 
 }
-const currentApp = "ch04_2_4";
+const currentApp = "ch09_1";
 const root = document.getElementById("root");
 createRoot(root).render(appObj[currentApp]);
 
